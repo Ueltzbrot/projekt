@@ -1,0 +1,28 @@
+html{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+body{
+    margin: 0;             
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+img{
+    display: block;
+    margin: 0 auto;         
+}
+
+div{
+    display: flex;
+    gap: 2rem;
+}

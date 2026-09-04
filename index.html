@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hallo</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
-    <p>hallo</p>
+    <nav>
+        <ul>
+            <li> <a href="./index.html">Home</a> </li>
+            <li> <a href="./rezepte.html">Rezepte</a></li>
+            <li> <a href="./ueber.html">Über Uns</a></li>
+            <li> <a href="./kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form action="index.html" method="get">
+            <label for="vorname">Vorname</label>
+            <input type="text" id="vorname" name="vorname">
 
-    
-    
+            <label for="nachname">Nachname</label>
+            <input type="text" id="nachname" name="nachname">
+
+            <button type="submit">Schick ab!</button>
+        </form>
+    </section>
+    <article>
+        <section>
+        <h1>Rinderzunge</h1>
+         <p>wie man eine Geile Rinderzunge zubereitet - die Anleitung von Fabrice Böhme</p>
+        <img src="fabrice.jpeg">
+        </section>
+        <div>
+        <section>
+            <h2>Zubereitung der Rinderzunge</h2>
+            <ol>
+                <li>Rinderzunge & Salat kaufen</li>
+                <li>Rinderzunge & Salat waschen</li>
+                <li>kurze Reel Pause</li>
+                <li>Salat rupfe</li>
+                <li>Rinderzunge 45h bei 180 Grad Umluft anbraten</li>
+                <li>Servieren und schmecken lassen!</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Zutatenliste</h2>
+            <ul>
+                <li>Rinderzunge 40kg</li>
+                <li>200g Salat</li>
+            </ul>
+        </section>
+</div>
+    </article>
+
+    <div id="results"></div>
+<a href="/index.html">Back to Form</a>
+<script>
+const resultsList = document.getElementById("results");
+new URLSearchParams(window.location.search).forEach((value, name) => {
+resultsList.append(`${name}: ${value}`);
+resultsList.append(document.createElement("br"));
+});
+</script>
 </body>
 </html>
