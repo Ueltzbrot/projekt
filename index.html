@@ -15,7 +15,7 @@
             <li> <a href="./kontakt.html">Kontakt</a></li>
         </ul>
     </nav>
-    <section>
+    <section class="form">
         <form action="index.html" method="get">
             <label for="vorname">Vorname</label>
             <input type="text" id="vorname" name="vorname">
@@ -24,16 +24,25 @@
             <input type="text" id="nachname" name="nachname">
 
             <button type="submit">Schick ab!</button>
+                <div id="results"></div>
+<a href="/index.html">Back to Form</a>
+<script>
+const resultsList = document.getElementById("results");
+new URLSearchParams(window.location.search).forEach((value, name) => {
+resultsList.append(`${name}: ${value}`);
+resultsList.append(document.createElement("br"));
+});
+</script>
         </form>
     </section>
     <article>
-        <section>
+        <section class="pic">
         <h1>Rinderzunge</h1>
          <p>wie man eine Geile Rinderzunge zubereitet - die Anleitung von Fabrice Böhme</p>
         <img src="fabrice.jpeg">
         </section>
-        <div>
-        <section>
+        <div class="rezept">
+        <section class="zubereitung">
             <h2>Zubereitung der Rinderzunge</h2>
             <ol>
                 <li>Rinderzunge & Salat kaufen</li>
@@ -44,7 +53,7 @@
                 <li>Servieren und schmecken lassen!</li>
             </ol>
         </section>
-        <section>
+        <section class="zutatenliste">
             <h2>Zutatenliste</h2>
             <ul>
                 <li>Rinderzunge 40kg</li>
@@ -54,14 +63,5 @@
 </div>
     </article>
 
-    <div id="results"></div>
-<a href="/index.html">Back to Form</a>
-<script>
-const resultsList = document.getElementById("results");
-new URLSearchParams(window.location.search).forEach((value, name) => {
-resultsList.append(`${name}: ${value}`);
-resultsList.append(document.createElement("br"));
-});
-</script>
 </body>
 </html>

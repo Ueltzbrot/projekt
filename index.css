@@ -1,28 +1,67 @@
-html{
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
 
 body{
-    margin: 0;             
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    align-items: center;
 }
 
+nav{
+    grid-row: 1;
+    grid-column: 2;
+}
+nav > ul{
+    display:flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
 article{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.rezept{
+display: flex;
+gap: 2rem;
+margin-top: 1rem;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.pic{
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
+}
+
+
+.form{
+    grid-row: 3;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
 }
 
 img{
     display: block;
-    margin: 0 auto;         
-}
+    margin: 0 auto;
+    margin-top: 1rem;
+    max-width: min(8rem, 30%);
+    height: auto;}
 
-div{
-    display: flex;
-    gap: 2rem;
-}
+    ul, ol { padding-left: 1.5rem; }
